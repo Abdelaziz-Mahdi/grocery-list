@@ -1,0 +1,10 @@
+.myHeader{
+    color: red;
+    font-size: 25px;
+}
+
+.myParagraph{
+    color: blue;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
