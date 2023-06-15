@@ -1,3 +1,5 @@
+import Button from "./Button";
+
 let productCount = 0;
 function displayProductCount() {
   return productCount > 0 ? productCount : 'Zero';
@@ -11,11 +13,11 @@ function ProductDetails(props) {
       <h6 className='font-weight-bold my-2' style={{ marginRight: '30px' }}>
         {props.price}
       </h6>
-      <button className='btn btn-primary'>-</button>
+      <Button>-</Button>
       <span style={{ padding: '8px 14px', fontSize: '13px' }}>
         {displayProductCount()}
       </span>
-      <button className='btn btn-primary'>+</button>
+      <Button>+</Button>
       <span className={badgeClass}>
         {props.isAvailable ? 'Available' : 'Unavailable'}
       </span>
