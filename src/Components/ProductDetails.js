@@ -1,21 +1,20 @@
 import Button from './Button';
+import { useState } from 'react';
 
 function ProductDetails(props) {
-  let productCount = 0;
+  let [productCount, updateCount] = useState(0);
   function displayProductCount() {
     return productCount > 0 ? productCount : 'Zero';
   }
-  
+
   let badgeClass = 'badge-margin-left-240 badge ';
   badgeClass += props.isAvailable ? 'bg-success' : 'bg-danger';
   let increaseCount = () => {
-    productCount++;
-    console.log(productCount);
+    updateCount(++productCount);
   };
   let decreaseCount = () => {
     if (productCount > 0) {
-      productCount--;
-      console.log(productCount);
+      updateCount(--productCount);
     }
   };
   return (
