@@ -3,7 +3,7 @@ import ProductForm from "./ProductForm"
 function CreateProduct(){
     return(
         <div className="row">
-            <div className="col-lg-8 mx-auto" style={{backgroundColor: 'white', padding: '10px 20px', marginBottom: '20px' }}>
+            <div className="col-lg-8 mx-auto" style={{backgroundColor: 'white', padding: '10px 20px', marginBottom: '25px' }}>
                 <ProductForm />
                 </div>                    
         </div>
