@@ -54,15 +54,28 @@ function ProductForm (){
     }
 
     function imageInputHandler(event){
-        setProductImage(event.target.files[0]);
+        setProductImage(event.target.value);
         // updatUserInput({
         //     ...userInput,
-        //     productImage: event.target.files[0]
+        //     productImage: event.target.value
         // });
     }
 
+    function createProductEventHundler(event){
+        event.preventDefault();
+        let productData = {
+            pID: 6,
+            pName: productName,
+            desc: productDescription,
+            isAvailable: isAvailable,
+            image: productImage,
+            price: Number(productPrice),
+        }
+        console.log(productData);
+    }
+
     return(
-        <form className="row g-3">
+        <form className="row g-3" onSubmit={createProductEventHundler}>
         <div className="col-md-6">
             <label for="name">Product Name</label>
             <input type="text" 
