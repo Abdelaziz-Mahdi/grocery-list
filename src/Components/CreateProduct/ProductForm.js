@@ -1,23 +1,30 @@
+import React, {useState} from 'react';
+
 function ProductForm (){
+    let[productName, setProductName] = useState("");
+    let[productPrice, setProductPrice] = useState(0);
+    let[productDescription, setProductDescription] = useState("");
+    let[isAvailable, setIsAvailable] = useState(false);
+    let[productImage, setProductImage] = useState("");
 
     function nameInputHandler(event){
-        console.log(event.target.value);
+        setProductName(event.target.value);
     }
 
     function priceInputHandler(event){
-        console.log(event.target.value);
+        setProductPrice(event.target.value);
     }
 
     function descriptionInputHandler(event){
-        console.log(event.target.value);
+        setProductDescription(event.target.value);
     }
     
     function isAvailableInputHandler(event){
-        console.log(event.target.value);
+        setIsAvailable(event.target.value);
     }
 
     function imageInputHandler(event){
-        console.log(event.target.value);
+        setProductImage(event.target.value);
     }
 
     return(
