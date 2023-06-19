@@ -1,30 +1,52 @@
 import React, {useState} from 'react';
 
 function ProductForm (){
-    let[productName, setProductName] = useState("");
-    let[productPrice, setProductPrice] = useState(0);
-    let[productDescription, setProductDescription] = useState("");
-    let[isAvailable, setIsAvailable] = useState(false);
-    let[productImage, setProductImage] = useState("");
+    // let[productName, setProductName] = useState("");
+    // let[productPrice, setProductPrice] = useState(0);
+    // let[productDescription, setProductDescription] = useState("");
+    // let[isAvailable, setIsAvailable] = useState(false);
+    // let[productImage, setProductImage] = useState("");
+    let[userInput, updatUserInput] = useState({
+        productName: "",
+        productPrice: 0,
+        productDescription: "",
+        isAvailable: false,
+        productImage: ""
+    });
 
     function nameInputHandler(event){
-        setProductName(event.target.value);
+        updatUserInput({
+            ...userInput,
+            productName: event.target.value
+        });
     }
 
     function priceInputHandler(event){
-        setProductPrice(event.target.value);
+        updatUserInput({
+            ...userInput,
+            productPrice: event.target.value
+        });
     }
 
     function descriptionInputHandler(event){
-        setProductDescription(event.target.value);
+        updatUserInput({
+            ...userInput,
+            productDescription: event.target.value
+        });
     }
     
     function isAvailableInputHandler(event){
-        setIsAvailable(event.target.value);
+        updatUserInput({
+            ...userInput,
+            isAvailable: event.target.checked
+        });
     }
 
     function imageInputHandler(event){
-        setProductImage(event.target.value);
+        updatUserInput({
+            ...userInput,
+            productImage: event.target.files[0]
+        });
     }
 
     return(
