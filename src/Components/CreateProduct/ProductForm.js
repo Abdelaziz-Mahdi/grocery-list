@@ -1,52 +1,64 @@
 import React, {useState} from 'react';
 
 function ProductForm (){
-    // let[productName, setProductName] = useState("");
-    // let[productPrice, setProductPrice] = useState(0);
-    // let[productDescription, setProductDescription] = useState("");
-    // let[isAvailable, setIsAvailable] = useState(false);
-    // let[productImage, setProductImage] = useState("");
-    let[userInput, updatUserInput] = useState({
-        productName: "",
-        productPrice: 0,
-        productDescription: "",
-        isAvailable: false,
-        productImage: ""
-    });
+    let[productName, setProductName] = useState("");
+    let[productPrice, setProductPrice] = useState(0);
+    let[productDescription, setProductDescription] = useState("");
+    let[isAvailable, setIsAvailable] = useState(false);
+    let[productImage, setProductImage] = useState("");
+    // let[userInput, updatUserInput] = useState({
+    //     productName: "",
+    //     productPrice: 0,
+    //     productDescription: "",
+    //     isAvailable: false,
+    //     productImage: ""
+    // });
 
     function nameInputHandler(event){
-        updatUserInput({
-            ...userInput,
-            productName: event.target.value
-        });
+        setProductName(event.target.value);
+        // updatUserInput({
+        //     ...userInput,
+        //     productName: event.target.value
+        // });
+        // updatUserInput((prevState) => {
+        //     return {
+        //         ...prevState,
+        //         productName: event.target.value
+        //     }
+        // }
+        // );
     }
 
     function priceInputHandler(event){
-        updatUserInput({
-            ...userInput,
-            productPrice: event.target.value
-        });
+        setProductPrice(event.target.value);
+        // updatUserInput({
+        //     ...userInput,
+        //     productPrice: event.target.value
+        // });
     }
 
     function descriptionInputHandler(event){
-        updatUserInput({
-            ...userInput,
-            productDescription: event.target.value
-        });
+        setProductDescription(event.target.value);
+        // updatUserInput({
+        //     ...userInput,
+        //     productDescription: event.target.value
+        // });
     }
     
     function isAvailableInputHandler(event){
-        updatUserInput({
-            ...userInput,
-            isAvailable: event.target.checked
-        });
+        setIsAvailable(event.target.checked);
+        // updatUserInput({
+        //     ...userInput,
+        //     isAvailable: event.target.checked
+        // });
     }
 
     function imageInputHandler(event){
-        updatUserInput({
-            ...userInput,
-            productImage: event.target.files[0]
-        });
+        setProductImage(event.target.files[0]);
+        // updatUserInput({
+        //     ...userInput,
+        //     productImage: event.target.files[0]
+        // });
     }
 
     return(
