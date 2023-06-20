@@ -71,6 +71,12 @@ function ProductForm (){
             image: productImage,
             price: Number(productPrice),
         }
+        console.log(productPrice);
+        setProductName("");
+        setProductPrice(0);
+        setProductDescription("");
+        setIsAvailable(false);
+        setProductImage("");
         console.log(productData);
     }
 
@@ -82,6 +88,7 @@ function ProductForm (){
                     className="form-control" 
                     id="name" 
                     placeholder="Product Name"
+                    value={productName}
                     onChange={nameInputHandler} />
         </div>
         <div className="col-md-6">
@@ -91,6 +98,7 @@ function ProductForm (){
                     className="form-control" 
                     id="price" 
                     placeholder="Product Price"
+                    value={productPrice}
                     onChange={priceInputHandler} />
         </div>
 
@@ -100,19 +108,20 @@ function ProductForm (){
                     className="form-control" 
                     id="description" 
                     placeholder="Product Description"
+                    value={productDescription}
                     onChange={descriptionInputHandler} />
         </div>
 
         <div class="form-check form-switch">
             <input class="form-check-input" type="checkbox" role="switch" id="isAvailable"
-            onChange={isAvailableInputHandler} />
+            checked={isAvailable} onChange={isAvailableInputHandler} />
             <label class="form-check-label" for="isAvailable">Is product available in stock?</label>
         </div>
 
         <div className="form-group">
             <label for="select-image">Select product image</label>
             <input type="file" className="form-control" id="select-image"
-            onChange={imageInputHandler} />
+            value={productImage} onChange={imageInputHandler} />
         </div>
         
 
