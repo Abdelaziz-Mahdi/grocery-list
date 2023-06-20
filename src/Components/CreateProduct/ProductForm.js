@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-function ProductForm (){
+function ProductForm (props){
     let[productName, setProductName] = useState("");
     let[productPrice, setProductPrice] = useState(0);
     let[productDescription, setProductDescription] = useState("");
@@ -64,20 +64,18 @@ function ProductForm (){
     function createProductEventHundler(event){
         event.preventDefault();
         let productData = {
-            pID: 6,
             pName: productName,
             desc: productDescription,
             isAvailable: isAvailable,
             image: productImage,
-            price: Number(productPrice),
+            price: '$'+Number(productPrice),
         }
-        console.log(productPrice);
         setProductName("");
         setProductPrice(0);
         setProductDescription("");
         setIsAvailable(false);
         setProductImage("");
-        console.log(productData);
+        props.getProductHandler(productData);
     }
 
     return(
@@ -112,10 +110,10 @@ function ProductForm (){
                     onChange={descriptionInputHandler} />
         </div>
 
-        <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" role="switch" id="isAvailable"
+        <div className="form-check form-switch">
+            <input className="form-check-input" type="checkbox" role="switch" id="isAvailable"
             checked={isAvailable} onChange={isAvailableInputHandler} />
-            <label class="form-check-label" for="isAvailable">Is product available in stock?</label>
+            <label className="form-check-label" for="isAvailable">Is product available in stock?</label>
         </div>
 
         <div className="form-group">
