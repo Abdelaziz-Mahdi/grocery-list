@@ -8,7 +8,7 @@ function ProductList(props) {
       <div className='col-lg-8 mx-auto'>
         <ul className='list-group shadow'>
           {props.setProductHandler.map((product) =>{return (<Products
-              key={product.pName}
+              key={product.pID}
               id={product.pID}
               name={product.pName}
               description={product.desc}

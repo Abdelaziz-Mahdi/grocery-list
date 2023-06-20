@@ -49,6 +49,7 @@ let products = [
 function App() {
   let [newProductsArr, setProductsArr] = useState(products);
   function addProductHandler(productData) {
+    productData.pID = newProductsArr.length + 1;
     setProductsArr([productData, ...newProductsArr]);
   }
 
