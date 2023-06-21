@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './app.css';
 import ProductList from './Components/ProductList/ProductList';
 import CreateProduct from './Components/CreateProduct/CreateProduct';
+import FilterProduct from './Components/FilterProduct/FilterProduct';
 
 let products = [
   {
@@ -53,10 +54,27 @@ function App() {
     setProductsArr([productData, ...newProductsArr]);
   }
 
+  let [filterValue, setFilterValue] = useState('all');
+
+  let filteredProducts = newProductsArr.filter((product) => {
+    if (filterValue === 'available') {
+      return product.isAvailable===true;
+    } else if (filterValue === 'unavailable') {
+      return product.isAvailable===false;
+    } else {
+      return product;
+    }
+  });
+  function filterProductHandler(filterValue) {
+    setFilterValue(filterValue);    
+  }
   return (
-    <div className='container'>
-      <CreateProduct getProductHandler={addProductHandler} />
-      <ProductList setProductHandler={newProductsArr} />
+    <div className='row'>
+      <div className='col-lg-8 mx-auto'>
+        <CreateProduct getProductHandler={addProductHandler} />
+        <FilterProduct filterProductHandler={filterProductHandler} />
+        <ProductList setProductHandler={filteredProducts} />
+      </div>
     </div>
   );
 }

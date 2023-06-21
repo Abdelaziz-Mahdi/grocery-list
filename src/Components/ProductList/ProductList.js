@@ -4,8 +4,6 @@ import Products from './Products';
 
 function ProductList(props) {
   return (
-    <div className='row'>
-      <div className='col-lg-8 mx-auto'>
         <ul className='list-group shadow'>
           {props.setProductHandler.map((product) =>{return (<Products
               key={product.pID}
@@ -17,8 +15,6 @@ function ProductList(props) {
               price={product.price}
             />);})}
         </ul>
-      </div>
-    </div>
   );
 }
 export default ProductList;
