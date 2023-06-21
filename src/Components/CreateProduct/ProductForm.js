@@ -76,6 +76,7 @@ function ProductForm (props){
         setIsAvailable(false);
         setProductImage("");
         props.getProductHandler(productData);
+        props.onCancel();
     }
 
     return(
@@ -124,6 +125,7 @@ function ProductForm (props){
         
 
         <button type="submit" className="btn btn-primary">Add Product</button>
+        <button type="button" className="btn btn-danger" onClick={props.onCancel}>Cancel</button>
     </form>
     )
 }
