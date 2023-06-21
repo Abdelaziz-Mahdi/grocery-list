@@ -3,7 +3,7 @@ import ProductDetails from "./ProductDetails";
 function Products(props) {
 
   return (
-      <li className='list-group-item'>
+      <li className='list-group-item' style={{backgroundColor: props.isAvailable? 'white' : 'gray'}}>
         <div className='d-flex media align-items-lg-center flex-column flex-lg-row p-3'>
           <div className='media-body order-2 order-lg-1'>
             <h5 className='mt-0 font-weight-bold mb-2'>{props.name}</h5>
