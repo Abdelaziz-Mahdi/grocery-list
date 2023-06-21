@@ -18,7 +18,7 @@ function Products(props) {
           />
 
         </div>
-        <ProductDetails price={props.price} isAvailable={props.isAvailable} />
+        <ProductDetails price={props.price} isAvailable={props.isAvailable} stock={props.stock}/>
       </li>
   );
 }

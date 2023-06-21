@@ -12,6 +12,7 @@ let products = [
     isAvailable: true,
     image: require('./images/fresh-milk.png'),
     price: '$12',
+    stock: 10,
   },
   {
     pID: 2,
@@ -20,6 +21,7 @@ let products = [
     isAvailable: false,
     image: require('./images/cottage-cheese.png'),
     price: '$10',
+    stock: 0,
   },
   {
     pID: 3,
@@ -28,6 +30,7 @@ let products = [
     isAvailable: true,
     image: require('./images/brocoli.png'),
     price: '$15',
+    stock: 10,
   },
   {
     pID: 4,
@@ -36,6 +39,7 @@ let products = [
     isAvailable: true,
     image: require('./images/oranges.png'),
     price: '$20',
+    stock: 10,
   },
   {
     pID: 5,
@@ -44,6 +48,7 @@ let products = [
     isAvailable: false,
     image: require('./images/olive-oil.png'),
     price: '$14',
+    stock: 0,
   },
 ];
 

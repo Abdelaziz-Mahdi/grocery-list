@@ -22,11 +22,11 @@ function ProductDetails(props) {
       <h6 className='font-weight-bold my-2' style={{ marginRight: '30px' }}>
         {props.price}
       </h6>
-      <Button eventHandler={decreaseCount}>-</Button>
+      <Button eventHandler={decreaseCount} disabled={productCount===0}>-</Button>
       <span style={{ padding: '8px 14px', fontSize: '13px' }}>
         {displayProductCount()}
       </span>
-      <Button eventHandler={increaseCount}>+</Button>
+      <Button eventHandler={increaseCount} disabled={productCount===props.stock}>+</Button>
       <span className={badgeClass}>
         {props.isAvailable ? 'Available' : 'Unavailable'}
       </span>
