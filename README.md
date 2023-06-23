@@ -158,7 +158,9 @@ Give a ⭐️ if you like this project!
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-Template used in the project provided by ([Procademy](https://www.youtube.com/@procademy))!
+- Template used in the project provided by ([Procademy](https://www.youtube.com/@procademy))!
+
+- Logo by ([Eco icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/eco))!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
