@@ -77,7 +77,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Hosted on Render](https://render.com/)
+- Hosted on Render : ([Grocery List Link](https://grocery-list-eaqi.onrender.com/))
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -85,7 +85,7 @@
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-To get a local copy up and running, follow these steps.
+If you want to get a local copy up and running, please follow these steps.
 
 ### Prerequisites
 
