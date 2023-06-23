@@ -1,10 +1,10 @@
 <a name="readme-top"></a>
 <div align="center">
-<h1>Pokedex</h1>
+<h1>Grocery List</h1>
 </div>
 
 <div align="center"> 
-  <img src="./src/media/sshot.png" alt="Screenshot Pokedex" width="340"  height="auto" />
+  <img src="./public/sshot.png" alt="Screenshot Grocery List" width="340"  height="auto" />
   <br/>
 </div>
 
@@ -28,12 +28,11 @@
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ](#faq)
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Pokedex<a name="about-project"></a>
+# 📖 Grocery List<a name="about-project"></a>
 
 
 **Grocery List Template**  is a React single-page Application, Built using CRA, It has pre-inserted grocery items and you can add more using the form at the top of the list you can also filter the list to display available or unavailable items only.
